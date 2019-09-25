@@ -1,0 +1,23 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link"
+       [routerLink]="['home']"
+       [routerLinkActive]="['active']">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link"
+       [routerLink]="['about']"
+       [routerLinkActive]="['active']">About</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link"
+       [routerLink]="['gifts']"
+       [routerLinkActive]="['active']">Gift Giving</a>
+  </li>
+  <li class="nav-item"
+      *ngIf="isAdmin$ | async">
+    <a class="nav-link"
+       [routerLink]="['admin']"
+       [routerLinkActive]="['active']">Admins Only!</a>
+  </li>
+</ul>
